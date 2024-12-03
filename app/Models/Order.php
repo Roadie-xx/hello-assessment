@@ -11,7 +11,7 @@ class Order extends Model
     protected static function booted()
     {
         static::updated(function (Order $order) {
-            if ($order->wasChanged('freight_payer_self')) {
+            if ($order->wasChanged('freight_payer_self') && $order->notified === '0') {
                 OrderChanged::dispatch($order);
             }
         });

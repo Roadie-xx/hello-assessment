@@ -14,8 +14,10 @@
     <p>Oder information.</p>
 
     <dl class="colored-definition-list">
-        <dt>id</dt>
+    <dt>id</dt>
         <dd>{{ $order->id }}</dd>
+        <dt>Notified</dt>
+        <dd>{{ $order->notified }}</dd>
         <dt>Bill of lading release date</dt>
         <dd>{{ $order->bl_release_date }}</dd>
         <dt>Bill of lading release user_id</dt>
