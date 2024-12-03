@@ -21,20 +21,21 @@ Route::get('/orders', function () {
 
 
 Route::get('/order/{id}', function (string $id) {
-    $order = Order::find($id)->first();
-
     return view('order', [
         'order' => DB::table('orders')->find($id)
     ]);
 });
 
 Route::get('/update/{id}', function (string $id) {
-    $order = Order::find($id)->first();
+    $order = Order::find($id);
 
-    $order->freight_payer_self = $order->freight_payer_self === 1 ? 0 : 1;
+    if ($order->notified === 0) {
+        $order->notified = 1;
+    }
 
     $order->save();
 
+    return to_route('order_overview');
 });
 
 Route::get('/mail/{id}', function (string $id) {
