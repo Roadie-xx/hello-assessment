@@ -30,7 +30,7 @@ Please keep me informed about your planning and progress (or problems) and feel 
 
 ## The solution
 
-Run the docker, configure it and go to [the webserver](http://localhost).
+Run the docker, configure it and go to [the webserver](http://localhost/orders).
 
 ### Configure and run
 Run the following commands to configure the app;
