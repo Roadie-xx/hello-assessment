@@ -8,7 +8,7 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>id</th>
+            <th>Id</th>
             <th>Notified</th>
             <th>Release date</th>
             <th>Release user</th>
@@ -23,7 +23,7 @@
          @foreach($orders as $order)
           <tr data-id="{{ $order->id }}">
               <td>{{ $order->id }}</td>
-              <td>{{ $order->notified === '1' ? 'Yes' : 'No' }} ({{ $order->notified }})</td>
+              <td>{{ $order->notified === 1 ? 'Yes' : 'No' }} ({{ $order->notified }})</td>
               <td>{{ $order->bl_release_date }}</td>
               <td>{{ $order->bl_release_user_id }}</td>
               <td>{{ $order->freight_payer_self ? 'self' : 'customer' }} ({{ $order->freight_payer_self }})</td>
