@@ -35,6 +35,7 @@
          @endforeach
    </tbody>
 </table>
+{{ $orders->links() }}
 @endsection
 
 @section('style')
