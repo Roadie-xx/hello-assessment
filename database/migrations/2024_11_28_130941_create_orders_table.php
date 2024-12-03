@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->bigIncrements('id');
             $table->dateTime('bl_release_date');
             $table->integer('bl_release_user_id');
             $table->boolean('freight_payer_self');
